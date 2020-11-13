@@ -3,8 +3,9 @@
   padding: 20px;
   margin: 100px auto;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around ;
+  justify-content: center;
 }
 
 .box-cards {
@@ -34,6 +35,8 @@
 
 .card-cocktail-title {
   padding: 10px;
+  font-family: Niconne;
+  font-size: xx-large;
 }
 
 .card-image{
@@ -42,6 +45,15 @@
   border-radius: 8px;
   top: 20px;
   border: 3px whitesmoke;
+}
+
+h2 {
+  font-family: Niconne;
+  font-size: xx-large;
+}
+
+li {
+  font-family: Lobster, cursive;
 }
 
 .card-info {

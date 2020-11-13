@@ -1,7 +1,7 @@
-<div class="container">
-  <button class="btn btn-warning"><%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %></button>
+<div class="container d-flex justify-content-center mt-5">
+  <button class="btn btn-warning mr-3"><%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %></button>
   <button class="btn btn-warning"><%= link_to "Home", cocktails_path %></button>
-  <button class="btn btn-warning"><%= link_to 'Delete Cocktail 🗑', cocktail_path(@cocktail), method: :delete %></button>
+  <button class="btn btn-warning ml-3"><%= link_to 'Delete Cocktail 🗑', cocktail_path(@cocktail), method: :delete %></button>
 </div>
 
 <div class="container-cards">
