@@ -1,11 +1,26 @@
-<h2><%= @cocktail.name %></h2>
+<div class="container">
+  <button class="btn btn-warning"><%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %></button>
+  <button class="btn btn-warning"><%= link_to "Home", cocktails_path %></button>
+  <button class="btn btn-warning"><%= link_to 'Delete Cocktail 🗑', cocktail_path(@cocktail), method: :delete %></button>
+</div>
 
-<%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "Home", cocktails_path %>
-<%= link_to 'Delete Cocktail 🗑', cocktail_path(@cocktail), method: :delete %>
+<div class="container-cards">
 
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.ingredient.name %> : <%= dose.description %> ( <%= link_to 'Delete? 🗑', dose_path(dose), method: :delete %> )</li>
-  <% end %>
-</ul>
+    <div class="box-cards">
+      <div class="card-display">
+        <div class="card-background">
+
+              <img class="card-image" src="https://source.unsplash.com/featured/?{cocktail}?sig=" alt="Card image cap">
+              <div class="card-content">
+                <h5 class="card-cocktail-title"><h2><%= @cocktail.name %></h2></h5>
+                <p class="card-info"><ul>
+                  <% @cocktail.doses.each do |dose| %>
+                    <li><%= dose.ingredient.name %> : <%= dose.description %> ( <%= link_to 'Delete? 🗑', dose_path(dose), method: :delete %> )</li>
+                  <% end %>
+                </ul></p>
+              </div>
+
+        </div>
+      </div>
+    </div>
+</div>
