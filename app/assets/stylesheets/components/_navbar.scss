@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(236, 131, 10);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +8,11 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#navbar-title {
+  font-family: 'Niconne', cursive;
+  justify-content: left;
 }

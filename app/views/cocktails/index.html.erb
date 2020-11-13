@@ -1,7 +1,32 @@
-<h1> Mr Cocktail </h1>
+<%# <h1> Mr Cocktail </h1>
 
-<button><%= link_to 'Create a cocktail', new_cocktail_path %></button>
+<button><%= link_to 'Create a cocktail', new_cocktail_path %><%#</button>
 
-<ul> <% @cocktails.each do |c| %>
-<li> <%= link_to c.name, cocktail_path(c) %> </li>
- <% end%></ul>
+<%# <ul> <% @cocktails.each do |c| %>
+<%# <li> <%= link_to c.name, cocktail_path(c) %>
+<%#</li>
+ <% end%><%#</ul> %>
+
+
+
+<div class="container-cards">
+    <div class="box-cards">
+      <div class="card-display">
+        <div class="card-background">
+            <% @cocktails.each do |c| %>
+              <img class="card-image" src="https://source.unsplash.com/featured/?{cocktail}?sig=" alt="Card image cap">
+              <div class="card-content">
+                <h5 class="card-cocktail-title"><%= link_to c.name, cocktail_path(c)%></h5>
+                <p class="card-info"><ul>
+                <% c.doses.each do |dose| %>
+                  <li><%= dose.ingredient.name %> : <%= dose.description %>( <%= link_to 'Delete? 🗑', dose_path(dose), method: :delete %> )</li>
+                <% end %>
+                </ul></p>
+                <button class="btn btn-warning"><%= link_to 'Create a cocktail', new_cocktail_path %></button>
+              </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
