@@ -8,11 +8,18 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 50px;
+  width: 70px;
   border-radius: 50%;
+  border: 6px, solid, black;
 }
 
 #navbar-title {
   font-family: 'Niconne', cursive;
-  justify-content: left;
+  font-size: 60px;
+  align-items: left;
+}
+
+a {
+  font-family: 'Lobster', cursive;
+  font-size: 24px;
 }
