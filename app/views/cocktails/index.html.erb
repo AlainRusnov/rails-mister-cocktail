@@ -10,7 +10,7 @@
         <div class="card-display">
           <div class="card-background">
 
-            <img class="card-image" src="https://source.unsplash.com/featured/?{cocktail}?sig=" alt="Card image cap">
+            <img class="card-image" src="<%= render "shared/image" %>" alt="Card image cap">
               <div class="card-content">
                 <h5 class="card-cocktail-title"><%= link_to c.name, cocktail_path(c)%></h5>
                 <p class="card-info"><ul>
